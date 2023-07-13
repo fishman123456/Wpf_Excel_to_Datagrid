@@ -44,16 +44,30 @@ namespace Wpf_Excel_to_Datagrid
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 
             var extension = fileNames.Substring(fileNames.LastIndexOf('.'));
-            // Создаем поток для чтения.
-            FileStream stream = File.Open(fileNames, FileMode.Open, FileAccess.Read);
-            // В зависимости от расширения файла Excel, создаем тот или иной читатель.
-            // Читатель для файлов с расширением *.xlsx.
-            if (extension == ".xlsx")
-                edr = ExcelReaderFactory.CreateOpenXmlReader(stream);
-            // Читатель для файлов с расширением *.xls.
-            else if (extension == ".xls")
-                edr = ExcelReaderFactory.CreateBinaryReader(stream);
+            try
+            {
+                // Создаем поток для чтения.
+                FileStream stream = File.Open(fileNames, FileMode.Open, FileAccess.Read);
+                // В зависимости от расширения файла Excel, создаем тот или иной читатель.
+                // Читатель для файлов с расширением *.xlsx.
+                if (extension == ".xlsx")
+                    edr = ExcelReaderFactory.CreateOpenXmlReader(stream);
+                // Читатель для файлов с расширением *.xls.
+                else if (extension == ".xls")
+                    edr = ExcelReaderFactory.CreateBinaryReader(stream);
+  
+               
 
+                // После завершения чтения освобождаем ресурсы.
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n\r" + "Возможно файл открыт"+"\n\r"+"Выходим из программы");
+                // закрываем окно
+                Win1.Close();
+                // закрываем программу
+                System.Environment.Exit(1);
+            }
             //// reader.IsFirstRowAsColumnNames
             var conf = new ExcelDataSetConfiguration
             {
@@ -65,8 +79,6 @@ namespace Wpf_Excel_to_Datagrid
             // Читаем, получаем DataView и работаем с ним как обычно.
             DataSet dataSet = edr.AsDataSet(conf);
             DataView dtView = dataSet.Tables[0].AsDataView();
-
-            // После завершения чтения освобождаем ресурсы.
             edr.Close();
             return dtView;
         }
