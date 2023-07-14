@@ -26,7 +26,8 @@ namespace Wpf_Excel_to_Datagrid
         {
             InitializeComponent();
         }
-       
+        // список для добавления dataSet причем только строк
+        List<string> RowExcel = new List<string>();
         private void OpenExcel_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -55,14 +56,11 @@ namespace Wpf_Excel_to_Datagrid
                 // Читатель для файлов с расширением *.xls.
                 else if (extension == ".xls")
                     edr = ExcelReaderFactory.CreateBinaryReader(stream);
-  
-               
-
                 // После завершения чтения освобождаем ресурсы.
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + "\n\r" + "Возможно файл открыт"+"\n\r"+"Выходим из программы");
+                MessageBox.Show(ex.Message + "\n\r" + "Возможно файл открыт" + "\n\r" + "Выходим из программы");
                 // закрываем окно
                 Win1.Close();
                 // закрываем программу
@@ -76,9 +74,30 @@ namespace Wpf_Excel_to_Datagrid
                     UseHeaderRow = true
                 }
             };
+
             // Читаем, получаем DataView и работаем с ним как обычно.
             DataSet dataSet = edr.AsDataSet(conf);
+            // выводим в datagrid
             DataView dtView = dataSet.Tables[0].AsDataView();
+
+            // добавляем в список данные из таблицы excel
+            foreach (DataTable dt in dataSet.Tables)
+            {
+                MessageBox.Show (dt.TableName); // название таблицы
+                                                 // перебор всех столбцов
+                foreach (DataColumn column in dt.Columns)
+                    RowExcel.Add( column.ColumnName);
+
+                // перебор всех строк таблицы  https://metanit.com/sharp/adonet/3.6.php
+                foreach (DataRow row in dt.Rows)
+                {
+                    // получаем все ячейки строки
+                    var cells = row.ItemArray;
+                    foreach (object cell in cells)
+                        Console.Write("\t{0}", cell);
+                    Console.WriteLine();
+                }
+            }
             edr.Close();
             return dtView;
         }
