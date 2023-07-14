@@ -94,8 +94,7 @@ namespace Wpf_Excel_to_Datagrid
                     // получаем все ячейки строки
                     var cells = row.ItemArray;
                     foreach (object cell in cells)
-                        Console.Write("\t{0}", cell);
-                    Console.WriteLine();
+                       MessageBox.Show (cell.ToString());
                 }
             }
             edr.Close();

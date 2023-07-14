@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:Wpf_Excel_to_Datagrid"
         mc:Ignorable="d"
         Title="U-84" Height="450" Width="800">
-    <StackPanel>
-        <Button x:Name="OpenExcel" 
+    <Grid >
+        
+                <Button x:Name="OpenExcel" 
+                Grid.Row="2"    Grid.Column="2"
                 Content="Выбрать файл" 
                 HorizontalAlignment="Left" 
                 VerticalAlignment="Top" 
@@ -19,10 +21,11 @@
                 Cursor="Hand" 
                 Click="OpenExcel_Click" 
                 Width="181"/>
-        <DataGrid x:Name="DbGrig" 
+        <DataGrid x:Name="DbGrig"
+                  Grid.Row="1" Grid.Column="2"
                   ItemsSource="{Binding}"                  
                   Margin="10" 
                   Height="343" 
                   />
-    </StackPanel>
+    </Grid>
 </Window>
