@@ -1,8 +1,3 @@
-C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\Wpf_Excel_to_Datagrid.csproj.AssemblyReference.cache
-C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\Wpf_Excel_to_Datagrid_MarkupCompile.cache
-C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\Wpf_Excel_to_Datagrid_MarkupCompile.lref
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\bin\Debug\net6.0-windows\Wpf_Excel_to_Datagrid.exe
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\bin\Debug\net6.0-windows\Wpf_Excel_to_Datagrid.deps.json
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\bin\Debug\net6.0-windows\Wpf_Excel_to_Datagrid.runtimeconfig.json
@@ -16,6 +11,11 @@ C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\bin\Debug\net6.0
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\bin\Debug\net6.0-windows\Irony.dll
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\bin\Debug\net6.0-windows\XLParser.dll
+C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\Wpf_Excel_to_Datagrid.csproj.AssemblyReference.cache
+C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\Wpf_Excel_to_Datagrid_MarkupCompile.cache
+C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\Wpf_Excel_to_Datagrid_MarkupCompile.lref
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\Wpf_Excel_to_Datagrid.g.resources
 C:\Users\Fishman.DB.CORP\Documents\GitHub\Wpf_Excel_to_Datagrid\obj\Debug\net6.0-windows\Wpf_Excel_to_Datagrid.GeneratedMSBuildEditorConfig.editorconfig

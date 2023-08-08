@@ -7,25 +7,50 @@
         mc:Ignorable="d"
         Title="U-84" Height="450" Width="800">
     <Grid >
-        
-                <Button x:Name="OpenExcel" 
-                Grid.Row="2"    Grid.Column="2"
-                Content="Выбрать файл" 
-                HorizontalAlignment="Left" 
-                VerticalAlignment="Top" 
-                Height="43"  
-                FontFamily="Tahoma" 
-                FontSize="16" 
-                Margin="10,10,0,0" 
-                FontWeight="Bold" 
-                Cursor="Hand" 
-                Click="OpenExcel_Click" 
-                Width="181"/>
-        <DataGrid x:Name="DbGrig"
-                  Grid.Row="1" Grid.Column="2"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <!-- кнопка для считвывание первого файла ексель-->
+        <Button x:Name="OpenExcel1" 
+                Grid.Row="6"    Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2"
+            Content="Выбрать файл 1"
+                Margin="15"
+                FontSize="16"
+                Click="OpenExcel_Click_1" />
+        <!-- кнопка для считвывание второго файла ексель-->
+        <Button x:Name="OpenExce2" 
+                Grid.Row="6"    Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2"
+            Content="Выбрать файл 2"
+                Margin="15"
+                FontSize="16"
+                Click="OpenExcel_Click_2" />
+
+        <!-- таблица для вывода первого файла ексель-->
+        <DataGrid x:Name="DbGrig1"
+                  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="6"
                   ItemsSource="{Binding}"                  
                   Margin="10" 
-                  Height="343" 
+                  />
+        <!-- таблица для вывода второго файла ексель-->
+        <DataGrid x:Name="DbGrig2"
+                  Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="3" Grid.RowSpan="6"
+                  ItemsSource="{Binding}"                  
+                  Margin="10" 
                   />
     </Grid>
 </Window>
